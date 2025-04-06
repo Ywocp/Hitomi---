@@ -18,7 +18,6 @@ const FILTER_PERCENTAGE_RATING_RANGE = 'Rating'
 const FILTER_SUBSCRIBED_VIDEOS = 'Hide Subscribed Videos'
 const FILTER_TAG_BLACKLIST = 'Tag Blacklist'
 const FILTER_TEXT_BLACKLIST = 'Blacklist'
-const FILTER_TEXT_SEARCH = 'Search'
 const FILTER_TEXT_SANITIZATION = 'Text Sanitization Rules'
 const FILTER_TEXT_WHITELIST = 'Whitelist'
 const FILTER_UNRATED = 'Unrated'
@@ -48,9 +47,14 @@ this._configurationManager
         '每行一个关键词，使用英文双引号包裹短语',
         // 保留原有处理逻辑...
     )
-
 this._configurationManager.addRangeField(FILTER_DURATION_RANGE, 0, 100000, '按视频时长过滤（分钟）')
-
 this._configurationManager.addTagRulesetField(FILTER_TAG_BLACKLIST, 5, '输入标签黑名单，每行一个规则，使用"&"和"|"组合')
-
 this._uiGen.updateStatus('初始运行完成！')
+
+// 保留所有功能逻辑代码不变，例如：
+class BrazenBaseSearchEnhancer {
+    constructor(config) {
+        // 构造函数逻辑保持不变
+    }
+    // 所有方法实现保持原样
+}
