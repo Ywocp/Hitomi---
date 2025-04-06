@@ -23,8 +23,8 @@ const FILTER_GALLERY_TYPES = '显示画廊类型'
 const FILTER_PAGES = '页数'
 const FILTER_LANGUAGES = '语言'
 const OPTION_REMOVE_RELATED_GALLERIES = '移除相关画廊'
-const UI_FAVOURITE_TAGS = '收藏标签'
-const UI_DISLIKED_TAGS = '不喜欢的标签'
+const UI_FAVOURITE_TAGS = '喜欢的标签'
+const UI_DISLIKED_TAGS = '厌恶的标签'
 const UI_SHOW_ALL_TAGS = '显示所有画廊标签'
 const ITEM_GALLERY_TYPE = '画廊类型'
 const ITEM_LANGUAGE = '语言'
@@ -147,7 +147,7 @@ class HitomiSearchAndUITweaks extends BrazenBaseSearchEnhancer {
             ], '选择要显示的语言')
             .addFlagField(OPTION_REMOVE_RELATED_GALLERIES, '从画廊页面移除相关画廊部分。')
             .addFlagField(UI_SHOW_ALL_TAGS, '在搜索结果中显示所有画廊标签。')
-            .addRangeField(FILTER_PAGES, 0, Infinity, '关闭不满足这些页数限制的画廊页面。仅对新标签页打开的画廊有效。')
+            .addRangeField(FILTER_PAGES, 0, Infinity, '关闭不满足这些页数限制的画廊页面，仅对新标签页打开的画廊有效。')
         this._itemAttributesResolver
             .addAttribute(ITEM_GALLERY_TYPE, (item) => item.attr('class'))
             .addAttribute(ITEM_LANGUAGE, (item) => {
@@ -160,8 +160,8 @@ class HitomiSearchAndUITweaks extends BrazenBaseSearchEnhancer {
         this._addItemComplianceFilter(FILTER_LANGUAGES, ITEM_LANGUAGE)
         this._addItemComplianceFilter(FILTER_GALLERY_TYPES, ITEM_GALLERY_TYPE)
         let otherTagSections = IS_GALLERY_PAGE ? $('.tags') : null
-        this._addItemTagHighlights(UI_FAVOURITE_TAGS, otherTagSections, 'favourite-tag', '指定要高亮的收藏标签，可以使用"&" "|"。')
-        this._addItemTagHighlights(UI_DISLIKED_TAGS, otherTagSections, 'disliked-tag', '指定要高亮的不喜欢标签，可以使用"&" "|"。')
+        this._addItemTagHighlights(UI_FAVOURITE_TAGS, otherTagSections, 'favourite-tag', '高亮喜欢的标签，可以使用"&" "|"。')
+        this._addItemTagHighlights(UI_DISLIKED_TAGS, otherTagSections, 'disliked-tag', '高亮厌恶的标签，可以使用"&" "|"。')
         this._addItemTagBlacklistFilter(8)
     }
 
