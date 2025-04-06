@@ -8,7 +8,7 @@
 // @match        https://hitomi.la/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js
 // @require      https://update.greasyfork.org/scripts/375557/1244990/Base%20Brazen%20Resource.js
-// @require      https://update.greasyfork.org/scripts/416104/1451214/Brazen%20UI%20Generator.js
+// @require      https://github.com/Ywocp/Hitomi---/raw/refs/heads/main/Brazen%20UI%20Generator.is
 // @require      https://update.greasyfork.org/scripts/418665/1408619/Brazen%20Configuration%20Manager.js
 // @require      https://update.greasyfork.org/scripts/429587/1244644/Brazen%20Item%20Attributes%20Resolver.js
 // @require      https://github.com/Ywocp/Hitomi---/raw/refs/heads/main/Brazen%20Base%20Search%20Enhancer.js
