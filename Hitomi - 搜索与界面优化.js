@@ -80,11 +80,11 @@ class HitomiSearchAndUITweaks extends BrazenBaseSearchEnhancer {
         this._onUIBuilt(() => this._uiGen.getSelectedSection()[0].userScript = this)
         this._onFirstHitAfterCompliance.push((item) => {
             this._performComplexOperation(UI_SHOW_ALL_TAGS, (flag) => flag && !IS_GALLERY_PAGE, () => {
-                let tags = item.find('.relatedtags > ul > li')
-                let lastTag = tags.last()
+                let 标签 = item.find('.relatedtags > ul > li')
+                let lastTag = 标签.last()
                 if (lastTag.text() === '...') {
                     lastTag.remove()
-                    tags.filter('.hidden-list-item').removeClass('hidden-list-item')
+                    标签.filter('.hidden-list-item').removeClass('hidden-list-item')
                 }
             })
         })
@@ -160,8 +160,8 @@ class HitomiSearchAndUITweaks extends BrazenBaseSearchEnhancer {
         this._addItemComplianceFilter(FILTER_LANGUAGES, ITEM_LANGUAGE)
         this._addItemComplianceFilter(FILTER_GALLERY_TYPES, ITEM_GALLERY_TYPE)
         let otherTagSections = IS_GALLERY_PAGE ? $('.tags') : null
-        this._addItemTagHighlights(UI_FAVOURITE_TAGS, otherTagSections, 'favourite-tag', '指定要高亮的收藏标签。"&" "|" 可以使用。')
-        this._addItemTagHighlights(UI_DISLIKED_TAGS, otherTagSections, 'disliked-tag', '指定要高亮的不喜欢标签。"&" "|" 可以使用。')
+        this._addItemTagHighlights(UI_FAVOURITE_TAGS, otherTagSections, 'favourite-tag', '指定要高亮的收藏标签，可以使用"&" "|"。')
+        this._addItemTagHighlights(UI_DISLIKED_TAGS, otherTagSections, 'disliked-tag', '指定要高亮的不喜欢标签，可以使用"&" "|"。')
         this._addItemTagBlacklistFilter(8)
     }
 
