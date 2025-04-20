@@ -14,6 +14,7 @@
 // @require      https://github.com/Ywocp/Hitomi---/raw/refs/heads/main/Brazen%20Base%20Search%20Enhancer.js
 // @grant        GM_addStyle
 // @run-at       document-end
+// @downloadURL  https://github.com/Ywocp/Hitomi---/raw/refs/heads/main/Hitomi%20-%20%E6%90%9C%E7%B4%A2%E4%B8%8E%E7%95%8C%E9%9D%A2%E4%BC%98%E5%8C%96.js
 // ==/UserScript==
 
 GM_addStyle(
